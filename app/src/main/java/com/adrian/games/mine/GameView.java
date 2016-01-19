@@ -1,4 +1,4 @@
-package com.adrian.mine.view;
+package com.adrian.games.mine;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -14,7 +14,7 @@ import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
 
-import com.adrian.mine.R;
+import com.adrian.games.R;
 
 import java.util.Random;
 
@@ -36,8 +36,6 @@ public class GameView extends View {
             sendMessageDelayed(obtainMessage(0), delayMillis);
         }
     }
-
-    ;
 
     // 游戏状态 开始 胜利 失败 暂停
     public static final int STATE_PLAYING = 0;
@@ -79,7 +77,8 @@ public class GameView extends View {
         //设置画笔的属性
         paint = new Paint();
         paint.setARGB(255, 60, 60, 200);
-        paint.setTextSize(12);
+        paint.setTextSize(20);
+        paint.setTextAlign(Paint.Align.CENTER);
 
         tiles = new Bitmap[tilesCount];//tilesCount = 19;
         loadTiles();
@@ -181,7 +180,7 @@ public class GameView extends View {
     public void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         // Log.v(TAG, "onDraw");
-        if (altKeyDown) {//红旗的图标是否未按下样式
+        if (altKeyDown) {//红旗的图标是否为按下样式
             canvas.drawARGB(255, 255, 0, 0);
             canvas.drawBitmap(tiles[17], 30, 0, paint);
         } else {
@@ -195,7 +194,7 @@ public class GameView extends View {
         }
 
         message = "剩余：" + remain + "  耗时" + time + "秒";
-        canvas.drawText(message, 0, message.length(), 80, 15, paint);
+        canvas.drawText(message, 0, message.length(), 180, 15, paint);
 
         for (int x = 0; x < tileCountX; x += 1) {
             for (int y = 0; y < tileCountY; y += 1) {

@@ -1,12 +1,10 @@
-package com.adrian.mine.activity;
+package com.adrian.games.mine;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 
-import com.adrian.mine.view.GameView;
-
-public class MainActivity extends AppCompatActivity {
+public class MineMainActivity extends AppCompatActivity {
 
     GameView gameView;
 
