@@ -6,6 +6,8 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
         android:name=".application.MyApplication"
@@ -24,6 +26,14 @@
         <activity android:name=".mine.MineMainActivity"></activity>
         <activity android:name=".gomoku.GomokuMainActivity"></activity>
         <activity android:name=".gobang.AutoGobangActivity" />
+
+
+        <meta-data
+            android:value="569e049ae0f55ada8b000aca"
+            android:name="UMENG_APPKEY"></meta-data>
+        <meta-data
+            android:value="ClassicGames"
+            android:name="UMENG_CHANNEL" />
     </application>
 
 </manifest>
