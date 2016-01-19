@@ -18,7 +18,10 @@ import com.adrian.games.R;
 
 import java.util.Random;
 
-public class GameView extends View {
+/**
+ * 扫雷游戏界面
+ */
+public class MineView extends View {
     private static final String TAG = "GameView";
 
     private RefreshHandler mRedrawHandler = new RefreshHandler();
@@ -27,8 +30,8 @@ public class GameView extends View {
 
         @Override
         public void handleMessage(Message msg) {
-            GameView.this.updateView();
-            GameView.this.invalidate();
+            MineView.this.updateView();
+            MineView.this.invalidate();
         }
 
         public void sleep(long delayMillis) {
@@ -72,7 +75,7 @@ public class GameView extends View {
     long startTime, lastTime;
     long time, remain;
 
-    public GameView(Context context) {
+    public MineView(Context context) {
         super(context);
         //设置画笔的属性
         paint = new Paint();

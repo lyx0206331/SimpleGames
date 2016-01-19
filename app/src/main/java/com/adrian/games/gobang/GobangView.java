@@ -12,14 +12,14 @@ import android.view.View;
 
 import com.adrian.games.R;
 
-public class GameView extends View {
+public class GobangView extends View {
     private int gridSize = 0; // 五子棋盘每格的大小
     private int selectX = 7; // 选中网格关于棋盘的X坐标
     private int selectY = 7; // 选中网格关于棋盘的Y坐标
     private final Rect selectRect = new Rect();// 选中网格对于屏幕的方块信息
     private AutoGobangActivity backAct;
 
-    public GameView(Context context) {
+    public GobangView(Context context) {
         super(context);
         this.setBackgroundResource(R.mipmap.wood1);// 设置背景图
         backAct = (AutoGobangActivity) context;

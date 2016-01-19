@@ -17,18 +17,18 @@ public class AutoGobangActivity extends Activity {
     private int[][] combo = new int[2][572];  //记录2位玩家所有可能的连珠数，-1则为永远无法5连珠，0代表电脑，1代表玩家
     private boolean[][][][] table = new boolean[2][15][15][572];
     private Coordinate lastPlayersCoordinate;
-    private GameView gameView;
+    private GobangView gobangView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         initGame();
-        setContentView(gameView);
+        setContentView(gobangView);
     }
 
     private void initGame() {
-        GameView gameView = new GameView(this);
-        this.gameView = gameView;
+        GobangView gobangView = new GobangView(this);
+        this.gobangView = gobangView;
         this.ai = new EasyAi();
         int icount = 0;
         //遍历所有的五连子可能情况的权值
@@ -145,7 +145,7 @@ public class AutoGobangActivity extends Activity {
                 setPieceIfValid(c.x, c.y, 1);
             }
         }
-        gameView.invalidate();
+        gobangView.invalidate();
     }
 
     /*setPiece方法 前置条件：已经检查过该格放入棋子不会造成冲突，并且已经检查是否轮到该色棋子下
@@ -163,7 +163,7 @@ public class AutoGobangActivity extends Activity {
                         this.combo[1][i] = -1;
                     }
                 }
-                gameView.select(x, y);
+                gobangView.select(x, y);
                 break;
             case 2://玩家下
                 lastPlayersCoordinate = new Coordinate(x, y);

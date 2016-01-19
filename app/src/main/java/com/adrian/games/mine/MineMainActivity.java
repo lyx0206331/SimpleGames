@@ -6,33 +6,33 @@ import android.view.KeyEvent;
 
 public class MineMainActivity extends AppCompatActivity {
 
-    GameView gameView;
+    MineView mineView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        gameView = new GameView(this);
-        setContentView(gameView);
+        mineView = new MineView(this);
+        setContentView(mineView);
     }
 
     @Override
     protected void onPause() {
         // TODO Auto-generated method stub
-        gameView.gameState = GameView.STATE_LOST;
+        mineView.gameState = MineView.STATE_LOST;
         super.onPause();
     }
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         // TODO Auto-generated method stub
-        gameView.onKeyDown(keyCode, event);
+        mineView.onKeyDown(keyCode, event);
         return super.onKeyDown(keyCode, event);
     }
 
     @Override
     public boolean onKeyUp(int keyCode, KeyEvent event) {
         // TODO Auto-generated method stub
-        gameView.onKeyUp(keyCode, event);
+        mineView.onKeyUp(keyCode, event);
         return super.onKeyUp(keyCode, event);
     }
 }
