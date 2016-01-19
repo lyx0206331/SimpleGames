@@ -23,6 +23,7 @@
         </activity>
         <activity android:name=".mine.MineMainActivity"></activity>
         <activity android:name=".gomoku.GomokuMainActivity"></activity>
+        <activity android:name=".gobang.AutoGobangActivity" />
     </application>
 
 </manifest>

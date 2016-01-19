@@ -3,4 +3,10 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="puzzle_hilite">#ffffffff</color>
+    <color name="puzzle_light">#64c6d4ef</color>
+    <color name="puzzle_dark">#6456648f</color>
+    <color name="puzzle_selected">#64ff8000</color>
+    <color name="text_title">#ffff0000</color>
 </resources>
