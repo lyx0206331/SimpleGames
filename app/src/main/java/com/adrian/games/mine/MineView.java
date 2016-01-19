@@ -22,7 +22,7 @@ import java.util.Random;
  * 扫雷游戏界面
  */
 public class MineView extends View {
-    private static final String TAG = "GameView";
+    private static final String TAG = "MineView";
 
     private RefreshHandler mRedrawHandler = new RefreshHandler();
 
