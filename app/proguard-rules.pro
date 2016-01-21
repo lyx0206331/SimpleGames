@@ -51,3 +51,14 @@
 -keep class * implements android.os.Parcelable { # 保持 Parcelable 不被混淆
     public static final android.os.Parcelable$Creator *;
 }
+
+-keepclassmembers class * {
+    public (org.json.JSONObject);
+}
+
+-keep public class com.adrian.games.R$*{
+    public static final int *;
+}
+
+
+
