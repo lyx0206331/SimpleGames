@@ -7,6 +7,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Rect;
+import android.graphics.Typeface;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
@@ -80,8 +81,9 @@ public class MineView extends View {
         //设置画笔的属性
         paint = new Paint();
         paint.setARGB(255, 60, 60, 200);
-        paint.setTextSize(20);
+        paint.setTextSize(40);
         paint.setTextAlign(Paint.Align.CENTER);
+        paint.setTypeface(Typeface.DEFAULT_BOLD);
 
         tiles = new Bitmap[tilesCount];//tilesCount = 19;
         loadTiles();
@@ -185,19 +187,19 @@ public class MineView extends View {
         // Log.v(TAG, "onDraw");
         if (altKeyDown) {//红旗的图标是否为按下样式
             canvas.drawARGB(255, 255, 0, 0);
-            canvas.drawBitmap(tiles[17], 30, 0, paint);
+            canvas.drawBitmap(tiles[17], offsetX + 60, 0, paint);
         } else {
-            canvas.drawBitmap(tiles[16], 30, 0, paint);
+            canvas.drawBitmap(tiles[16], offsetX + 60, 0, paint);
         }
 
         if (gameState != STATE_LOST) {//判断笑脸与哭脸
-            canvas.drawBitmap(tiles[18], 0, 0, paint);
+            canvas.drawBitmap(tiles[18], offsetX, 0, paint);
         } else {
-            canvas.drawBitmap(tiles[15], 0, 0, paint);
+            canvas.drawBitmap(tiles[15], offsetX, 0, paint);
         }
 
-        message = "剩余：" + remain + "  耗时" + time + "秒";
-        canvas.drawText(message, 0, message.length(), 180, 15, paint);
+        message = "剩余:" + remain + "  耗时" + time + "秒";
+        canvas.drawText(message, 0, message.length(), (offsetX << 2) + 200, offsetX, paint);
 
         for (int x = 0; x < tileCountX; x += 1) {
             for (int y = 0; y < tileCountY; y += 1) {
