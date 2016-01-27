@@ -23,7 +23,7 @@ public class GomokuView extends View {
 
 
     protected static int GRID_SIZE = 10;
-    protected static int GRID_WIDTH = 30; // 棋盘格的宽度
+    protected static int GRID_WIDTH = 60; // 棋盘格的宽度
     protected static int CHESS_DIAMETER = 26; // 棋的直径
     protected static int mStartX;// 棋盘定位的左上角X
     protected static int mStartY;// 棋盘定位的左上角Y
