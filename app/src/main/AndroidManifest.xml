@@ -16,16 +16,24 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.MainActivity">
+        <activity
+            android:name=".activity.MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".mine.MineMainActivity"></activity>
-        <activity android:name=".gomoku.GomokuMainActivity"></activity>
-        <activity android:name=".gobang.AutoGobangActivity" />
+        <activity
+            android:name=".mine.MineMainActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".gomoku.GomokuMainActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".gobang.AutoGobangActivity"
+            android:screenOrientation="portrait" />
 
 
         <meta-data
