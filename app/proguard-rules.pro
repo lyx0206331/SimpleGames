@@ -18,11 +18,15 @@
 
 -optimizationpasses 5          # 指定代码的压缩级别
 -dontusemixedcaseclassnames   # 是否使用大小写混合
+-dontskipnonpubliclibraryclasses    #不去忽略非公共的库类
 -dontpreverify           # 混淆时是否做预校验
 -verbose                # 混淆时是否记录日志
 
 -optimizations !code/simplification/arithmetic,!field/*,!class/merging/*  # 混淆时所采用的算法
 
+-keepattributes *Annotation*    #保护注解
+
+-keep public class * extends android.app.Fragment       # 保持哪些类不被混淆
 -keep public class * extends android.app.Activity      # 保持哪些类不被混淆
 -keep public class * extends android.app.Application   # 保持哪些类不被混淆
 -keep public class * extends android.app.Service       # 保持哪些类不被混淆
@@ -31,6 +35,10 @@
 -keep public class * extends android.app.backup.BackupAgentHelper # 保持哪些类不被混淆
 -keep public class * extends android.preference.Preference        # 保持哪些类不被混淆
 -keep public class com.android.vending.licensing.ILicensingService    # 保持哪些类不被混淆
+
+-keep public class * extends android.support.v4.app.Fragment        #如果有引用v4包可以添加这行
+
+-ignorewarning      #忽略警告
 
 -keepclasseswithmembernames class * {  # 保持 native 方法不被混淆
     native <methods>;
@@ -52,9 +60,9 @@
     public static final android.os.Parcelable$Creator *;
 }
 
--keepclassmembers class * {
-    public (org.json.JSONObject);
-}
+#-keepclassmembers class * {
+#    public (org.json.JSONObject);
+#}
 
 -keep public class com.adrian.games.R$*{
     public static final int *;
