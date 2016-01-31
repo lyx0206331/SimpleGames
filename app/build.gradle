@@ -50,11 +50,13 @@ android {
     //签名
     signingConfigs {
         debug {
-            storeFile file("C:/Users/卿/.android/debug.keystore")
+//            storeFile file("C:/Users/卿/.android/debug.keystore")
+            storeFile file("/Users/ranqing/.android/debug.keystore")
         }
         release {
-            //这样写就得把demo.jk文件放在项目目录
-            storeFile file("D:/workspace/appkey.keystore")
+            //这样写就得把签名文件放在项目目录
+//            storeFile file("D:/workspace/appkey.keystore")
+            storeFile file("/Users/ranqing/Documents/android-sdk-mac_android_studio/appkey.keystore")
             storePassword "lengyuxuan1534."
             keyAlias "adrian_keystore"
             keyPassword "lengyuxuan1534."
