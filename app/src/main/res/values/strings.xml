@@ -4,6 +4,7 @@
     <string name="mine">扫雷</string>
     <string name="gomoku">五子棋</string>
     <string name="auto_gobang">人机对战五子棋</string>
+    <string name="sudoku">数独</string>
 
     <string name="btn_newgame">New</string>
     <string name="btn_about">About</string>

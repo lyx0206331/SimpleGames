@@ -9,4 +9,11 @@
     <color name="puzzle_dark">#6456648f</color>
     <color name="puzzle_selected">#64ff8000</color>
     <color name="text_title">#ffff0000</color>
+
+    <!--sudoku-->
+    <color name="sudoku_bg">#ffe6f0ff</color>
+    <color name="sudoku_hilite">#ffffff</color>
+    <color name="sudoku_light">#64c6d4ef</color>
+    <color name="sudoku_dark">#6456648f</color>
+
 </resources>

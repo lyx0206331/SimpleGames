@@ -7,7 +7,12 @@ import android.os.Bundle;
 
 import com.umeng.analytics.game.UMGameAgent;
 
-public class BaseActivity extends AppCompatActivity {
+/**
+ * 基类Activity
+ * @author RanQing
+ * create at 16-6-29 上午1:09
+ */
+public abstract class BaseActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,6 +20,10 @@ public class BaseActivity extends AppCompatActivity {
 
         UMGameAgent.setDebugMode(true);//设置输出运行时日志
         UMGameAgent.init(this);
+
+        initVariables();
+        initViews();
+        loadData();
     }
 
     @Override
@@ -33,4 +42,19 @@ public class BaseActivity extends AppCompatActivity {
         Intent intent = new Intent(getApplication(), cls);
         startActivity(intent);
     }
+
+    /**
+     * 初始化变量
+     */
+    protected abstract void initVariables();
+
+    /**
+     * 初始化UI
+     */
+    protected abstract void initViews();
+
+    /**
+     * 数据加载
+     */
+    protected abstract void loadData();
 }
