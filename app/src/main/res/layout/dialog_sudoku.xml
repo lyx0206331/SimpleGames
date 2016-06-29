@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TableRow>
+
+        <Button
+            android:id="@+id/btn_keypad_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="1" />
+
+        <Button
+            android:id="@+id/btn_keypad_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/btn_keypad_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="3" />
+    </TableRow>
+
+    <TableRow>
+
+        <Button
+            android:id="@+id/btn_keypad_4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="4" />
+
+        <Button
+            android:id="@+id/btn_keypad_5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="5" />
+
+        <Button
+            android:id="@+id/btn_keypad_6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="6" />
+    </TableRow>
+
+    <TableRow>
+
+        <Button
+            android:id="@+id/btn_keypad_7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="7" />
+
+        <Button
+            android:id="@+id/btn_keypad_8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="8" />
+
+        <Button
+            android:id="@+id/btn_keypad_9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="9" />
+    </TableRow>
+
+</TableLayout>

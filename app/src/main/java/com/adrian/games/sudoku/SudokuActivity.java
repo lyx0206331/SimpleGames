@@ -4,6 +4,12 @@ import android.os.Bundle;
 
 import com.adrian.games.activity.BaseActivity;
 
+/**
+ * 数独界面
+ *
+ * @author RanQing
+ *         create at 16-6-29 下午5:59
+ */
 public class SudokuActivity extends BaseActivity {
 
     private SudokuView sudokuView;

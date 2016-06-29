@@ -1,5 +1,6 @@
 package com.adrian.games.sudoku;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
@@ -8,7 +9,11 @@ import android.graphics.Paint;
 import android.graphics.drawable.Drawable;
 import android.text.TextPaint;
 import android.util.AttributeSet;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
+import android.widget.TextView;
 
 import com.adrian.games.R;
 
@@ -23,8 +28,11 @@ public class SudokuView extends View {
     private float width;
     private float height;
 
+    private SudokuGame game;
+
     public SudokuView(Context context) {
         super(context);
+        game = new SudokuGame();
     }
 
     @Override
@@ -76,7 +84,32 @@ public class SudokuView extends View {
 
         float x = width / 2;
         float y = height / 2 - (metrics.descent + metrics.ascent) / 2;
-        canvas.drawText("1", x, 2 * height + y, numPaint);
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                canvas.drawText(game.getTileString(i, j), i * width + x, j * height + y, numPaint);
+            }
+        }
         super.onDraw(canvas);
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        if (event.getAction() != MotionEvent.ACTION_DOWN) {
+            return super.onTouchEvent(event);
+        }
+
+        int selectedX = (int) (event.getX() / width);
+        int selectedY = (int) (event.getY() / height);
+        int[] used = game.getUsedTilesByCoor(selectedX, selectedY);
+        StringBuffer sb = new StringBuffer();
+        for (int i :
+                used) {
+            Log.e("TAG", i + "");
+            sb.append(i);
+        }
+
+        KeyDialog keyDialog = new KeyDialog(getContext(), used);
+        keyDialog.show();
+        return true;
     }
 }
