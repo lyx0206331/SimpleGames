@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "23.0.2"
+    buildToolsVersion '25.0.0'
 
     defaultConfig {
         applicationId "com.adrian.games"
@@ -50,9 +50,9 @@ android {
     //签名
     signingConfigs {
         debug {
-//            storeFile file("C:/Users/卿/.android/debug.keystore")
-//            storeFile file("/Users/ranqing/.android/debug.keystore")
-            storeFile file("/home/adrian/.android/debug.keystore")
+//            storeFile file("C:/Users/卿/.android/debug.keystore")  //windows
+            storeFile file("/Users/ranqing/.android/debug.keystore")    //mac
+//            storeFile file("/home/adrian/.android/debug.keystore")    //ubuntu
 
         }
         release {
@@ -155,4 +155,6 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.1.1'
     compile files('libs/umeng-analytics-game-v5.6.4.0.jar')
+    compile 'com.jakewharton:butterknife:8.4.0'
+    compile 'de.cketti.library.changelog:ckchangelog:1.2.2'
 }

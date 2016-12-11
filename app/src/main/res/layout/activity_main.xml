@@ -38,6 +38,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/sudoku" />
+
+        <Button
+            android:id="@+id/btn_2046"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/game_2046"/>
     </LinearLayout>
 
 </ScrollView>

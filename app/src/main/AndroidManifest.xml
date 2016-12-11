@@ -42,7 +42,8 @@
             android:name="UMENG_CHANNEL"
             android:value="${UMENG_CHANNEL_VALUE}" />
 
-        <activity android:name=".sudoku.SudokuActivity"></activity>
+        <activity android:name=".sudoku.SudokuActivity" />
+        <activity android:name=".g2048.Game2048Activity"></activity>
     </application>
 
 </manifest>

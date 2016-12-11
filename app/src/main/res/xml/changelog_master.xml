@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<changelog>
+    <release version="1.0.0" versioncode="1">
+        <change>初始第一版，几个小游戏的集合，肯定还有bug，希望大家参与测试，谢谢！</change>
+        <change>1.加入2048</change>
+        <change>2.加入五子棋（人机对战版）</change>
+    </release>
+</changelog>
